@@ -6,7 +6,7 @@ import { DeleteUserAdapter} from '../../infrastructure/adapters/delete-user.adap
 import { User } from '../../domain/entities/user.entity';
 import { CreateUserDto } from '../../application/dto/create-user.dto';
 import { UpdateUserDto } from '../../application/dto/update-user.dto';
-import { GetAllUsersAdapter } from '../adapters/get-all-user.adapter';
+import { GetAllUsersAdapter } from '../../infrastructure/adapters/get-all-user.adapter';
 
 
 @Injectable()

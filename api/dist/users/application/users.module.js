@@ -9,13 +9,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UsersModule = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
-const users_service_1 = require("../infrastructure/services/users.service");
+const users_service_1 = require("../application/services/users.service");
 const create_user_adapter_1 = require("./../infrastructure/adapters/create-user.adapter");
 const get_user_adapter_1 = require("./../infrastructure/adapters/get-user.adapter");
 const update_user_adapter_1 = require("./../infrastructure/adapters/update-user.adapter");
 const delete_user_adapter_1 = require("./../infrastructure/adapters/delete-user.adapter");
 const user_entity_1 = require("./../domain/entities/user.entity");
-const user_controller_1 = require("../infrastructure/controllers/user.controller");
+const user_controller_1 = require("../infrastructure/adapters/controllers/user.controller");
 const get_all_user_adapter_1 = require("../infrastructure/adapters/get-all-user.adapter");
 let UsersModule = class UsersModule {
 };
