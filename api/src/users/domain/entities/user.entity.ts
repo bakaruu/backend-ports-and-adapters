@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, Unique } from 'typeorm';
+import { Project } from 'src/projects/domain/entities/project.entity';
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, Unique, JoinTable, ManyToMany } from 'typeorm';
 
 @Entity()
 @Unique(['email'])
@@ -31,6 +32,10 @@ export class User {
 
     @Column({ nullable: true })
     photoUrl: string;
+
+    @ManyToMany(() => Project, project => project.users)
+    @JoinTable()
+    projects: Project[];
 
     @CreateDateColumn()
     created_at: Date;

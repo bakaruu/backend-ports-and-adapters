@@ -1,3 +1,4 @@
+import { Project } from 'src/projects/domain/entities/project.entity';
 export declare class User {
     id: string;
     name: string;
@@ -7,6 +8,7 @@ export declare class User {
     role: UserRole;
     jobTitle: string;
     photoUrl: string;
+    projects: Project[];
     created_at: Date;
     updated_at: Date;
 }

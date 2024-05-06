@@ -1,8 +1,5 @@
-export declare class UpdateProjectDto {
-    id: string;
-    name?: string;
-    description?: string;
-    photoUrl?: string;
-    userIds?: string[];
-    clientId?: string;
+import { CreateProjectDto } from './create-project.dto';
+declare const UpdateProjectDto_base: import("@nestjs/mapped-types").MappedType<Partial<CreateProjectDto>>;
+export declare class UpdateProjectDto extends UpdateProjectDto_base {
 }
+export {};

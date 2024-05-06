@@ -13,6 +13,7 @@ const user_entity_1 = require("./users/domain/entities/user.entity");
 const users_module_1 = require("./users/application/users.module");
 const client_entity_1 = require("./clients/domain/entities/client.entity");
 const clients_module_1 = require("./clients/application/clients.module");
+const project_entity_1 = require("./projects/domain/entities/project.entity");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -26,7 +27,7 @@ exports.AppModule = AppModule = __decorate([
                 username: 'user',
                 password: 'password',
                 database: 'postgres',
-                entities: [user_entity_1.User, client_entity_1.Client],
+                entities: [user_entity_1.User, client_entity_1.Client, project_entity_1.Project],
                 synchronize: true,
             }),
             users_module_1.UsersModule,

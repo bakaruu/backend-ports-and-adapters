@@ -5,8 +5,8 @@ export declare class Project {
     name: string;
     description: string;
     photoUrl: string;
-    users: User[];
     client: Client;
+    users: User[];
     created_at: Date;
     updated_at: Date;
 }

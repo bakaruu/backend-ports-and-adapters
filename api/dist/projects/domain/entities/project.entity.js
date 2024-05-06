@@ -33,14 +33,13 @@ __decorate([
     __metadata("design:type", String)
 ], Project.prototype, "photoUrl", void 0);
 __decorate([
-    (0, typeorm_1.ManyToMany)(() => user_entity_1.User),
-    (0, typeorm_1.JoinTable)(),
-    __metadata("design:type", Array)
-], Project.prototype, "users", void 0);
-__decorate([
-    (0, typeorm_1.ManyToOne)(() => client_entity_1.Client),
+    (0, typeorm_1.ManyToOne)(() => client_entity_1.Client, client => client.projects),
     __metadata("design:type", client_entity_1.Client)
 ], Project.prototype, "client", void 0);
+__decorate([
+    (0, typeorm_1.ManyToMany)(() => user_entity_1.User, user => user.projects),
+    __metadata("design:type", Array)
+], Project.prototype, "users", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)

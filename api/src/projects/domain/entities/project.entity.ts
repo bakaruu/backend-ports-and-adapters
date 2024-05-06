@@ -17,12 +17,11 @@ export class Project {
     @Column({ nullable: true })
     photoUrl: string;
 
-    @ManyToMany(() => User)
-    @JoinTable()
-    users: User[];
-
-    @ManyToOne(() => Client)
+    @ManyToOne(() => Client, client => client.projects)
     client: Client;
+
+    @ManyToMany(() => User, user => user.projects)
+    users: User[];
 
     @CreateDateColumn()
     created_at: Date;

@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Client = void 0;
+const project_entity_1 = require("../../../projects/domain/entities/project.entity");
 const typeorm_1 = require("typeorm");
 let Client = class Client {
 };
@@ -34,6 +35,10 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], Client.prototype, "phone", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => project_entity_1.Project, project => project.client),
+    __metadata("design:type", Array)
+], Client.prototype, "projects", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)

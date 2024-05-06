@@ -13,9 +13,9 @@ export class CreateProjectDto {
     @IsString()
     photoUrl?: string;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsArray()
-    userIds: string[];
+    userIds?: string[];
 
     @IsNotEmpty()
     @IsString()

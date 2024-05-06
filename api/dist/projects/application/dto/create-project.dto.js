@@ -30,7 +30,7 @@ __decorate([
     __metadata("design:type", String)
 ], CreateProjectDto.prototype, "photoUrl", void 0);
 __decorate([
-    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsArray)(),
     __metadata("design:type", Array)
 ], CreateProjectDto.prototype, "userIds", void 0);

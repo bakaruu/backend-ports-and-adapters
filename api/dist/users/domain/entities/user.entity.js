@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserRole = exports.User = void 0;
+const project_entity_1 = require("../../../projects/domain/entities/project.entity");
 const typeorm_1 = require("typeorm");
 let User = class User {
 };
@@ -50,6 +51,11 @@ __decorate([
     (0, typeorm_1.Column)({ nullable: true }),
     __metadata("design:type", String)
 ], User.prototype, "photoUrl", void 0);
+__decorate([
+    (0, typeorm_1.ManyToMany)(() => project_entity_1.Project, project => project.users),
+    (0, typeorm_1.JoinTable)(),
+    __metadata("design:type", Array)
+], User.prototype, "projects", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
